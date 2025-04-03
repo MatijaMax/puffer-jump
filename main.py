@@ -149,13 +149,13 @@ class Titan:
     def draw(self):
         self.actor.draw()        
 
-# PUFFER JUMP-PUFFER FRENZY :)
+# PUFFER FRENZY :) (inspired by feeeding frenzy)
 WIDTH = 640 
 HEIGHT = 353
 sounds.background.play(loops=-1) 
-play_button = Rect(250, 150, 140, 40)
-exit_button = Rect(250, 200, 140, 40)
-mute_button = Rect(250, 250, 140, 40)
+play_button = Rect(280, 150, 140, 40)
+exit_button = Rect(280, 200, 140, 40)
+mute_button = Rect(280, 250, 140, 40)
 game_running = False
 music_muted = False
 is_puffed = False
@@ -242,7 +242,7 @@ def draw():
         draw_score()
     else:
         screen.blit('play', (0, 0))
-        screen.draw.text("Puffer Jump", center=(WIDTH // 2, 50), fontsize=50, color="white", background="black")
+        screen.draw.text("Puffer Frenzy", center=(WIDTH // 2 - 5, 50), fontsize=50, color="white", background="black")
         screen.draw.text("Play", play_button.topleft, fontsize=40, color="white", background="black")
         screen.draw.text("Unmute" if music_muted else "Mute", mute_button.topleft, fontsize=40, color="white", background="black")
         screen.draw.text("Exit", exit_button.topleft, fontsize=40, color="white", background="black")
